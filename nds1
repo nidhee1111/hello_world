@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node
+{
+ 	int data;
+	struct node *next;
+};
+
+	struct node *head =NULL;
+	struct node *tail = NULL;
+
+//insert the link at the first location
+	void insert(int data)
+{
+//create a link
+	struct node *link = (struct node) malloc(sizeof(struct node));
+
+//link->key = key;
+	link->data = data;
+
+//point it to theoold first node
+	link-> next = head;
+
+//point first to new first node
+
+   if(head = =NULL)
+	{
+      		head = link;
+      		tail= link;
+	}
+
+  else
+	{
+       		tail->next=link;
+        	tail=link;
+	}
+                                 printf("link list element is %d",link->data);
+}
+
+		int main()
+		{
+    			insert (10) ;
+    			insert (20) ;
+			insert (30);
+			insert(1);
+
+return 0;
+}
+
+
+
